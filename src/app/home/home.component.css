@@ -10,18 +10,18 @@ ul {
 li a {
   height: 20rem;
   width: 20rem;
-  border: 1px solid whitesmoke;
+  border: 1px solid rgb(94, 88, 88);
   background-color: aquamarine;
   border-radius: 1rem;
   margin: 0.5rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  color: blue;
 }
 
 li img {
   max-height: 15rem;
+  object-fit: cover;
 }
 
 li a:hover {
