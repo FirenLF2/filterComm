@@ -1,0 +1,30 @@
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+li a {
+  height: 20rem;
+  width: 20rem;
+  border: 1px solid whitesmoke;
+  background-color: aquamarine;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: blue;
+}
+
+li img {
+  max-height: 15rem;
+}
+
+li a:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
