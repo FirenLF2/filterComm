@@ -1,7 +1,13 @@
 <ul>
   <li *ngFor="let filter of filters">
     <a>
-      <img src="{{ filter }}" alt="" />
+      <img src="{{ filter.imageUrl }}" alt="" />
+      <div class="content">
+        <div class="name">
+          {{ filter.name }}
+        </div>
+        <span class="favorite"> ❤️ </span>
+      </div>
     </a>
   </li>
 </ul>
