@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home/HomeComponent';
 
 const routes: Routes = [{ path: '', component: HomeComponent }];
 
@@ -13,5 +13,6 @@ const routes: Routes = [{ path: '', component: HomeComponent }];
   imports: [RouterOutlet, HeaderComponent, HomeComponent],
 })
 export class AppComponent {
+  constructor() {}
   title = 'filterComm';
 }

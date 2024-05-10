@@ -6,7 +6,14 @@
         <div class="name">
           {{ filter.name }}
         </div>
-        <span class="favorite"> ❤️ </span>
+        <span class="favorite {{ filter.favorite ? '' : 'not' }}"> ❤️ </span>
+        <div class="product-item-footer">
+          <div class="origins">
+            <span *ngFor="let origin of filter.origins">
+              {{ origin }}
+            </span>
+          </div>
+        </div>
       </div>
     </a>
   </li>
