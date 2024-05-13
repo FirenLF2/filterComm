@@ -1,35 +1,29 @@
 header {
-  background: white;
-  padding: 0;
-  border-bottom: 1px solid grey;
-}
-
-a {
-  color: blue;
-}
-
-a:hover {
-  background: grey;
-  color: red;
+  margin: 2vh 7vw 0 7vw;
+  border-radius: 8px;
+  border: solid 1px #d1d1d1;
+  padding: 10px;
 }
 
 .container {
-  margin: auto;
   display: flex;
   justify-content: space-between;
+  align-content: center;
 }
 
-a.logo {
-  font-weight: bold;
-  padding: 1em;
+.logo {
+  font-weight: 800;
+  color: dimgray;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-}
-
-nav ul li a {
-  padding: 1em;
+a {
+  color: dimgray;
+  border-radius: 6px;
   display: inline-block;
+  padding: 16px;
+}
+
+a:hover {
+  background-color: dimgray;
+  color: #ffffff;
 }
