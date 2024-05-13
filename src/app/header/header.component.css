@@ -1,29 +1,39 @@
 header {
-  margin: 2vh 7vw 0 7vw;
-  border-radius: 8px;
-  border: solid 1px #d1d1d1;
-  padding: 10px;
+  border-bottom: solid 4px var(--secondary);
+  transition: ease-in-out 0.5s;
+}
+
+header:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 2);
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
+  background-color: var(--headline);
 }
 
-.logo {
+a.logo {
+  color: var(--paragraph);
   font-weight: 800;
-  color: dimgray;
+  margin: 0px;
+  padding: 25px;
+  transition: ease-in-out 0.3s;
 }
 
-a {
-  color: dimgray;
-  border-radius: 6px;
-  display: inline-block;
-  padding: 16px;
+a.logo:hover {
+  background-color: var(--background);
+  color: var(--headline);
 }
 
-a:hover {
-  background-color: dimgray;
-  color: #ffffff;
+img {
+  padding: 10px;
+  height: 75px;
+  transition: ease-in-out 0.3s;
+}
+
+img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
