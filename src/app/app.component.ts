@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet, Routes } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/HomeComponent';
+import { Routes } from '@angular/router';
 
-const routes: Routes = [{ path: '', component: HomeComponent }];
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'search/: searchTerm', component: HomeComponent },
+];
 
 @Component({
   selector: 'app-root',
