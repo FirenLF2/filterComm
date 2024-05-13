@@ -1,0 +1,98 @@
+section {
+  margin: 2vh 7vw 0 7vw;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  gap: 10vw;
+  border: 1px solid #d1d1d1;
+  border-radius: 0.5rem;
+  padding: 4rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 4em;
+}
+
+.header {
+  display: flex;
+  gap: 6rem;
+}
+
+.text-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+li .favorite {
+  color: #f03a17;
+}
+
+.tags {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.tag-item {
+  background-color: #d1d1d1;
+  color: dimgray;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.button-add {
+  padding: 1.5rem;
+  color: dimgray;
+  background-color: #d1d1d1;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+}
+
+.button-add:hover {
+  background-color: dimgray;
+  color: white;
+  cursor: pointer;
+}
+
+.img-tag {
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1200px) {
+  .img {
+    width: 30vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .img {
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+  .img-tag {
+    width: 100%;
+  }
+}

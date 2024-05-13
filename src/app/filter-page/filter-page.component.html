@@ -1,0 +1,27 @@
+<section>
+  @if (filter) {
+  <div class="card">
+    <div class="card-content">
+      <div class="header">
+        <div class="text-header">
+          <h1>{{ filter.name }}</h1>
+          <p>{{ filter.tags }}</p>
+        </div>
+        <span class="{{ filter.favorite ? 'favorite' : '' }}"> ❤ </span>
+      </div>
+      <div class="tags">
+        @for (tag of filter.tags; track filter.id) {
+        <span class="tag-item">{{ tag }}</span>
+        }
+      </div>
+      <h2 class="price">{{ filter.price | currency }}</h2>
+      <button class="button-add" (click)="addToCart()">Add to Cart</button>
+    </div>
+    <div>
+      <img class="img-tag" [src]="filter.imageUrl" alt="filter.image" />
+    </div>
+  </div>
+  } @else {
+  <div>Oops, no food was found!</div>
+  }
+</section>

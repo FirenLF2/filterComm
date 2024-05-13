@@ -1,0 +1,44 @@
+<section>
+  <ul>
+    @for (cartItem of cart.items; track cartItem.food.id) {
+    <li class="card">
+    <div class="img-tag">
+    <img class="img" [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
+    </div>
+    <div class="content">
+    <a routerLink="/food/{{cartItem.food.id}}">
+    {{cartItem.food.name}}
+    </a>
+    </div>
+    <div>
+    <select #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value)">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select>
+</div>
+<div>
+{{cartItem.price | currency}}
+</div>
+<div class="remove-button" (click)="removeFromCart(cartItem)">
+×
+</div>
+    </li>
+    }
+
+    @if(cart.items.length === 0) {
+    <div class="empty-cart">
+    There are no items yet!
+    </div>
+    }
+  </ul>
+
+  <div class="checkout">
+    <div class="figers">
+      <div class="food-count">Items: {{cart.items.length}}</div>
+      <div class="total-price">Total price: {{cart.totalPrice | currency}}</div>
+    </div>
+  </div>
+</section>
