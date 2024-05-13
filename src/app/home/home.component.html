@@ -1,29 +1,33 @@
-<ul>
-  <li *ngFor="let filter of filters">
-    <a>
-      <img src="{{ filter.imageUrl }}" alt="" />
-      <div class="content">
-        <div class="name">
-          {{ filter.name }}
+<section>
+  <app-search [searchTerm]="searchTerm" />
+  <ul>
+    @for (filter of filters; track filter.id) {
+    <li>
+      <a routerLink="/filter/{{ filter.id }}">
+        <div class="img">
+          <img [src]="filter.imageUrl" [alt]="filter.name" />
         </div>
-        <span class="favorite {{ filter.favorite ? '' : 'not' }}"> ❤ </span>
-        <div class="product-item-footer">
-          <div class="origins">
-            <span *ngFor="let origin of filter.origins">
-              {{ origin }}
-            </span>
+
+        <div class="card-content">
+          <div class="card-header">
+            <div>
+              <h4 class="card-title">{{ filter.name }}</h4>
+              <p>{{ filter.price | currency }}</p>
+            </div>
+            <span class="{{ filter.favorite ? 'favorite' : '' }}"> ❤ </span>
           </div>
-          <div class="cook-time">
-            <span>🛺</span>
-            {{ filter.cookTime }}
+
+          <div>
+            <h5>Tags</h5>
+            <div class="tags">
+              @for(tag of filter.tags; track tag) {
+              <span class="tag-item">{{ tag }}</span>
+              }
+            </div>
           </div>
         </div>
-        <div class="price">
-          <span>
-            {{ filter.price | currency }}
-          </span>
-        </div>
-      </div>
-    </a>
-  </li>
-</ul>
+      </a>
+    </li>
+    }
+  </ul>
+</section>

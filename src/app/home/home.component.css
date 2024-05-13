@@ -1,77 +1,80 @@
-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
+section {
+  margin: 2vh 7vw 0 7vw;
 }
 
-li a {
-  height: 21.5rem;
-  width: 20rem;
-  border: 1px solid rgb(94, 88, 88);
-  background-color: aquamarine;
-  border-radius: 1rem;
-  margin: 0.5rem;
+ul {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+ul li {
+  height: auto;
+  border: 1px solid #d1d1d1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1200px) {
+  ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+li a:hover {
+  opacity: 0.9;
+}
+
+ul li .img {
+  height: 20rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-li img {
-  max-height: 15rem;
-  object-fit: cover;
+li .card-content {
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: dimgray;
 }
 
-li a:hover {
-  opacity: 0.9;
-  cursor: pointer;
-}
-
-.content {
-  padding: 0.5rem 1rem;
-  position: relative;
-}
-
-.favorite {
-  color: red;
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 1.2rem;
-}
-
-.favorite.not {
-  color: grey;
-}
-
-.product-item-footer {
+li .card-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
-.origins {
-  flex: 9;
+li .card-title {
+  color: black;
 }
 
-.origins span {
-  border-radius: 2rem;
-  background-color: aqua;
-  display: inline-block;
-  font-size: 0.7rem;
-  color: green;
-  margin-right: 0.3rem;
+li .favorite {
+  color: #f03a17;
 }
 
-.cook-time {
-  font-size: 0.8rem;
-  flex: 3;
-  text-align: right;
+.tags {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
 }
 
-.price {
-  color: #414141;
-  margin-top: 0.7rem;
+.tag-item {
+  background-color: #d1d1d1;
+  color: dimgray;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
