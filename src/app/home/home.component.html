@@ -12,14 +12,14 @@
           <div class="card-header">
             <div>
               <h4 class="card-title">{{ filter.name }}</h4>
+              <div class="origins">
+                {{ filter.origins }}
+              </div>
               <p>{{ filter.price | currency }}</p>
             </div>
             <span class="{{ filter.favorite ? 'favorite' : '' }}"> ❤ </span>
           </div>
 
-          <div class="origins">
-            {{ filter.origins }}
-          </div>
           <div>
             <div class="tags">
               @for(tag of filter.tags; track tag) {
