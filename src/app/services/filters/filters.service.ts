@@ -7,6 +7,10 @@ import { Filter } from '../../shared/models/filters';
 export class FiltersService {
   constructor() {}
 
+  getFilterById(id: string): Filter | undefined {
+    return this.getAll().find((filter) => filter.id === +id);
+  }
+
   getAll(): Filter[] {
     return [
       {
