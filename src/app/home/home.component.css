@@ -11,27 +11,9 @@ ul {
 
 ul li {
   height: auto;
-  border: 1px solid #d1d1d1;
+  border: 1px solid var(--background);
   border-radius: 0.5rem;
   overflow: hidden;
-}
-
-@media only screen and (max-width: 1200px) {
-  ul {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  ul {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  ul {
-    grid-template-columns: 1fr;
-  }
 }
 
 li a:hover {
@@ -39,7 +21,8 @@ li a:hover {
 }
 
 ul li .img {
-  height: 20rem;
+  margin: 20px;
+  height: 18rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -68,13 +51,33 @@ li .favorite {
 
 .tags {
   display: flex;
+  flex-direction: column;
   gap: 0.8rem;
   margin-top: 0.5rem;
 }
 
 .tag-item {
+  text-align: center;
   background-color: #d1d1d1;
   color: dimgray;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  ul {
+    grid-template-columns: 1fr;
+  }
 }
