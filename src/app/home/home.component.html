@@ -17,8 +17,10 @@
             <span class="{{ filter.favorite ? 'favorite' : '' }}"> ❤ </span>
           </div>
 
+          <div class="origins">
+            {{ filter.origins }}
+          </div>
           <div>
-            <h5>Tags</h5>
             <div class="tags">
               @for(tag of filter.tags; track tag) {
               <span class="tag-item">{{ tag }}</span>
