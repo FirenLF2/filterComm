@@ -6,7 +6,6 @@
         <div class="text-header">
           <h1>{{ filter.name }}</h1>
         </div>
-        <span class="{{ filter.favorite ? 'favorite' : '' }}"> ❤ </span>
       </div>
       <div class="tags">
         @for (tag of filter.tags; track filter.id) {

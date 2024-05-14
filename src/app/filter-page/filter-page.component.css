@@ -3,7 +3,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 3rem;
+  margin: 11rem 2rem 11rem;
 }
 
 section > * {
@@ -12,12 +12,19 @@ section > * {
 }
 
 .card {
+  background-color: var(--paragraph);
   display: flex;
   flex-direction: row;
   place-content: center;
-  border: 1px solid #d1d1d1;
+  border: 3px solid var(--highlight);
   border-radius: 0.5rem;
-  padding: 3rem;
+  padding: 2rem;
+  box-shadow: 0 0 20px var(--button-text);
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.01);
 }
 
 .card-content {
@@ -30,15 +37,11 @@ section > * {
   color: black;
 }
 
-.header {
+h1 {
+  margin: 7px 5px;
   display: flex;
-  gap: 2rem;
-}
-
-.text-header {
-  display: flex;
-  flex-direction: column;
-  margin-right: auto;
+  justify-content: center;
+  padding: 0px 80px;
 }
 
 .header > span.favorite {
@@ -51,41 +54,60 @@ section > * {
 
 .tags {
   display: flex;
+  flex-direction: column;
+  margin: 15px auto 0px;
   gap: 0.8rem;
-  margin-top: 0.5rem;
 }
 
 .tag-item {
-  color: white;
-  background-color: #e72929;
+  margin: auto;
+  color: var(--headline);
+  background: var(--highlight);
+  box-shadow: 1px 2px 2px var(--button-text);
   border-radius: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
+  transition: 0.5s ease-in-out;
+}
+
+.tag-item:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .button-add {
-  color: white;
-  background: #e72929;
+  color: var(--headline);
+  background: var(--highlight);
   border: none;
   font-size: 1.2rem;
   padding: 1rem;
   margin: 0px 10px;
   border-radius: 10rem;
   outline: none;
+  transition: 0.5s ease-in-out;
 }
 
 .button-add:hover {
-  background-color: rgb(167, 167, 167);
-  color: rgb(205, 57, 57);
+  background-color: var(--tertiary);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--button-text);
   cursor: pointer;
 }
 
 .img-tag {
-  margin-top: 35px;
   width: 100%;
   display: flex;
   justify-content: center;
   border-radius: 1rem;
   overflow: hidden;
+  border: 4px solid var(--headline);
+  padding: 15px;
+  box-shadow: 1px 2px 2px var(--button-text);
+  transition: 0.5s ease-in-out;
+}
+
+.img-tag:hover {
+  border: 2px solid var(--highlight);
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -98,9 +120,6 @@ section > * {
   .text-header,
   .tags {
     margin: 0px auto;
-  }
-  .header {
-    padding-left: 60px;
   }
 }
 
