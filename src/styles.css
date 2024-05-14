@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
 :root {
@@ -21,23 +20,15 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-}
-
 body {
   background: linear-gradient(145deg, var(--background), var(--secondary));
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0;
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
-}
-
-ul {
-  list-style: none;
 }
