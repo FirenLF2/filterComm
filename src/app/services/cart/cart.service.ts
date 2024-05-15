@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Cart } from '../../shared/models/cart';
 import { Filter } from '../../shared/models/filters';
 import { CartItem } from '../../shared/models/cartItem';
+import { filter } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +21,16 @@ export class CartService {
 
   private loadCart(): Cart {
     const cartJson = localStorage.getItem(this.cartKey);
-    return cartJson ? JSON.parse(cartJson) : { items: [] };
+    return cartJson
+      ? JSON.parse(cartJson, (key, value) => {
+          if (key === 'items') {
+            return value.map(
+              (item: any) => new CartItem(item.filter, item.price)
+            );
+          }
+          return value;
+        })
+      : { items: [] };
   }
 
   addToCart(filter: Filter): void {
