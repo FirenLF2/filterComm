@@ -40,7 +40,7 @@
     <div class="figers">
       <div class="filter-count">Items: {{ cart.items.length }}</div>
       <div class="total-price">
-        Total price: {{ cart.totalPrice | currency }}
+        Total price: {{ getTotalPrice() | currency }}
       </div>
     </div>
   </div>

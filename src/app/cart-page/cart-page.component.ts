@@ -33,4 +33,8 @@ export class CartPageComponent {
   setCart() {
     this.cart = this.cartService.getCart();
   }
+
+  getTotalPrice(): number {
+    return this.cart.items.reduce((sum, item) => sum + item.price, 0);
+  }
 }
