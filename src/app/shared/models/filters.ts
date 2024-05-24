@@ -4,7 +4,6 @@ export class Filter {
   price!: number;
   tags?: string[];
   favorite: boolean = false;
-
   imageUrl!: string;
   descriptor!: string;
 }
