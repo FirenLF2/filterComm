@@ -99,11 +99,12 @@ ul {
 
 .empty-cart {
   border-radius: 0.5rem;
-  flex: max-content;
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 0 2vw 0 2vw;
+  padding: 20px;
   font-size: 20px;
+  text-align: center;
 }
 
 .selectClass {
@@ -129,6 +130,7 @@ ul {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 570px;
   }
   .card {
     display: flex;
@@ -145,5 +147,8 @@ ul {
   }
   .checkout {
     align-self: center;
+  }
+  .empty-cart {
+    padding-right: 50px;
   }
 }
