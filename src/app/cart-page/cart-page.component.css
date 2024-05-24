@@ -3,6 +3,7 @@ section {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 1vw;
+  align-items: start;
 }
 
 ul {
@@ -22,12 +23,12 @@ ul {
   align-items: center;
   padding: 20px 0 20px 0;
   border-radius: 12px;
-  justify-content: space-between; /* Distribute items evenly along the main axis */
+  justify-content: space-between;
 }
 
 .card > * {
-  flex: 1; /* Each item takes equal space */
-  margin: 0 50px; /* Add spacing between items */
+  flex: 1;
+  margin: 0 50px;
 }
 
 .img-wrapper {
@@ -64,9 +65,13 @@ ul {
 .remove-button {
   font-size: 2rem;
   font-weight: 600;
-  display: inline-block;
-  padding: 10px;
-  border-radius: 200px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+  border-radius: 50%;
+  padding: 0px 1px 3px 0px;
   transition: 0.5s ease-in-out;
 }
 
@@ -82,6 +87,8 @@ ul {
   padding: 2vw;
   background-color: var(--paragraph);
   box-shadow: 0 0 20px var(--button-text);
+  margin-top: 17px;
+  align-self: start;
 }
 
 .figers {
@@ -114,23 +121,29 @@ ul {
   color: var(--button-text);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
   section {
-    margin: 2rem 8rem 37rem;
-    grid-template-columns: 1fr;
+    margin: 2rem auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
   .card {
-    flex-direction: column; /* Stack cards vertically */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     font-size: 20px;
     box-shadow: 0 0 20px var(--button-text);
   }
   .img-tag {
-    flex-direction: column;
     width: 20vw;
     height: 20vw;
-    margin: auto;
+    align-self: center;
+  }
+  .checkout {
+    align-self: center;
   }
 }
