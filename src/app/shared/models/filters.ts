@@ -6,5 +6,5 @@ export class Filter {
   favorite: boolean = false;
 
   imageUrl!: string;
-  descriptor!: string[];
+  descriptor!: string;
 }

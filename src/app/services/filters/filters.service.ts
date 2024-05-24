@@ -18,9 +18,8 @@ export class FiltersService {
         name: 'Filter Bag M25-E',
         price: 4.35,
         favorite: false,
-        descriptor: [
-          'long filter bag, M25 style, hard top ring, water/oil resistant',
-        ],
+        descriptor:
+          'Long filter bag, M25 style, hard top ring, water/oil resistant',
         imageUrl: '/assets/images/filters/filter-1.png',
         tags: ['Oil-Filter', 'Bag', 'HardFilz'],
       },
@@ -29,9 +28,8 @@ export class FiltersService {
         name: 'Oil Filter R300 Engine',
         price: 25.89,
         favorite: true,
-        descriptor: [
+        descriptor:
           'Engine supportive Oil Filter, type R300, full-proof, rubber sealing ring, non-oil leakage, long service life, backflow suppression valve, high quality',
-        ],
         imageUrl: '/assets/images/filters/filter-2.png',
         tags: ['Engine', 'Oil-Filter'],
       },
@@ -40,9 +38,8 @@ export class FiltersService {
         name: 'Donaldson Heavy Duty Air Filter',
         price: 135.5,
         favorite: false,
-        descriptor: [
-          'durable and reliable, high quality, dependable filter, filters impurities and harmful particles',
-        ],
+        descriptor:
+          'Durable and reliable, high quality, dependable filter, filters impurities and harmful particles',
         imageUrl: '/assets/images/filters/filter-3.png',
         tags: ['Engine', 'Air-Filter', 'Donaldson'],
       },
@@ -51,9 +48,8 @@ export class FiltersService {
         name: 'Air Filter Dust Collector T-LW200',
         price: 99.95,
         favorite: true,
-        descriptor: [
+        descriptor:
           'High Efficiency Blended Filter Media, 13.8" OD x 18 H Open/Closed Endcap Configuration',
-        ],
         imageUrl: '/assets/images/filters/filter-4.png',
         tags: ['Dust Filter', 'Air-Filter'],
       },
@@ -62,9 +58,8 @@ export class FiltersService {
         name: 'Air Filter OEM',
         price: 44.99,
         favorite: false,
-        descriptor: [
-          'highly durable, non-clogging mechanism, OEM Performance, off-road filtration',
-        ],
+        descriptor:
+          'Highly durable, non-clogging mechanism, OEM Performance, off-road filtration',
         imageUrl: '/assets/images/filters/filter-5.png',
         tags: ['Engine', 'Air-Filter', 'OEM'],
       },
@@ -73,9 +68,8 @@ export class FiltersService {
         name: 'Briggs Stratton Air Catridge Filter',
         price: 47.58,
         favorite: false,
-        descriptor: [
+        descriptor:
           'Oval style pleated paper air filter, Filters out dirt and debris, OEM Performance, high quality',
-        ],
         imageUrl: '/assets/images/filters/filter-6.png',
         tags: ['Air-Filter', '4-Cycle', 'Engine'],
       },
