@@ -1,8 +1,8 @@
+// src/app/cart.service.ts
 import { Injectable } from '@angular/core';
 import { Cart } from '../../shared/models/cart';
 import { Filter } from '../../shared/models/filters';
 import { CartItem } from '../../shared/models/cartItem';
-import { filter } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -33,15 +33,20 @@ export class CartService {
       : { items: [] };
   }
 
-  addToCart(filter: Filter): void {
+  addToCart(filter: Filter): boolean {
     let cartItem = this.cart.items.find((item) => item.filter.id === filter.id);
     if (cartItem) {
       this.changeQuantity(filter.id, cartItem.quantity + 1);
-      return;
+      return false; // Item already in cart
     } else {
       this.cart.items.push(new CartItem(filter));
+      this.saveCart();
+      return true; // Item added successfully
     }
-    this.saveCart();
+  }
+
+  isItemInCart(filterId: number): boolean {
+    return this.cart.items.some((item) => item.filter.id === filterId);
   }
 
   removeFromCart(filterId: number): void {

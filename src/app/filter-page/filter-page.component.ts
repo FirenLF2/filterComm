@@ -2,19 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { FiltersService } from '../services/filters/filters.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Filter } from '../shared/models/filters';
-import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe, CommonModule } from '@angular/common';
 import { CartService } from '../services/cart/cart.service';
 
 @Component({
   selector: 'app-filter-page',
   standalone: true,
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, CommonModule],
   templateUrl: './filter-page.component.html',
-  styleUrl: './filter-page.component.css',
+  styleUrls: ['./filter-page.component.css'],
 })
 export class FilterPageComponent implements OnInit {
   filter: Filter | undefined;
   filterId!: string;
+  isInCart: boolean = false;
 
   constructor(
     private filterService: FiltersService,
@@ -27,11 +28,20 @@ export class FilterPageComponent implements OnInit {
     this.activatedRoute.paramMap.subscribe((paramMap) => {
       this.filterId = paramMap.get('id')!;
       this.filter = this.filterService.getFilterById(this.filterId);
+      this.checkIfInCart();
     });
   }
 
+  checkIfInCart() {
+    if (this.filter) {
+      this.isInCart = this.cartService.isItemInCart(this.filter.id);
+    }
+  }
+
   addToCart() {
-    this.cartService.addToCart(this.filter!);
-    this.router.navigateByUrl('/cart-page');
+    if (this.filter && !this.isInCart) {
+      this.cartService.addToCart(this.filter);
+      this.router.navigateByUrl('/cart-page');
+    }
   }
 }

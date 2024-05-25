@@ -66,25 +66,6 @@ h1 {
   cursor: pointer;
 }
 
-.button-add {
-  color: var(--headline);
-  background: var(--highlight);
-  border: none;
-  font-size: 1.2rem;
-  padding: 1rem;
-  margin: 0px 10px;
-  border-radius: 10rem;
-  outline: none;
-  transition: 0.5s ease-in-out;
-}
-
-.button-add:hover {
-  background-color: var(--tertiary);
-  transform: scale(1.1);
-  box-shadow: 0 0 20px var(--button-text);
-  cursor: pointer;
-}
-
 .img-tag {
   background: repeating-linear-gradient(
     45deg,
@@ -107,6 +88,36 @@ h1 {
 .img-tag:hover {
   border: 2px solid var(--highlight);
   cursor: pointer;
+}
+
+button {
+  color: var(--headline);
+  background: var(--highlight);
+  border: none;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin: 0px 10px;
+  border-radius: 10rem;
+  outline: none;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--headline);
+  color: var(--button-text);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--button-text);
+  cursor: pointer;
+}
+
+button.in-cart {
+  background-color: var(--tertiary);
+  color: var(--headline);
+}
+
+button.in-cart:hover {
+  transform: skew(2deg, 2deg);
+  cursor: default;
 }
 
 @media only screen and (max-width: 1200px) {

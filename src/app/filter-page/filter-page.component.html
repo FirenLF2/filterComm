@@ -13,7 +13,13 @@
         }
       </div>
       <h2 class="price">{{ filter.price | currency }}</h2>
-      <button class="button-add" (click)="addToCart()">Add to Cart</button>
+      <button
+        [ngClass]="{ 'in-cart': isInCart }"
+        [disabled]="isInCart"
+        (click)="addToCart()"
+      >
+        {{ isInCart ? "Already in Cart" : "Add to Cart" }}
+      </button>
     </div>
     <div>
       <img class="img-tag" [src]="filter.imageUrl" alt="filter.image" />
