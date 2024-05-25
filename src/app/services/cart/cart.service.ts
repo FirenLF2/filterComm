@@ -37,11 +37,11 @@ export class CartService {
     let cartItem = this.cart.items.find((item) => item.filter.id === filter.id);
     if (cartItem) {
       this.changeQuantity(filter.id, cartItem.quantity + 1);
-      return false; // Item already in cart
+      return false;
     } else {
       this.cart.items.push(new CartItem(filter));
       this.saveCart();
-      return true; // Item added successfully
+      return true;
     }
   }
 
