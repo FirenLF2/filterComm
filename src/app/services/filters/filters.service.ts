@@ -73,6 +73,26 @@ export class FiltersService {
         imageUrl: '/assets/images/filters/filter-6.png',
         tags: ['Air-Filter', '4-Cycle', 'Engine'],
       },
+      {
+        id: 7,
+        name: 'Filter Bag M50-E',
+        price: 3.99,
+        favorite: true,
+        descriptor:
+          'Water/Oil resistant, 100% Durability, Used for filtration of highly intoxicated oils',
+        imageUrl: '/assets/images/filters/filter-7.png',
+        tags: ['Filtz', 'Oil-Filter', 'Bag'],
+      },
+      {
+        id: 8,
+        name: 'Filtration Bag',
+        price: 14.5,
+        favorite: false,
+        descriptor:
+          'Highly durable and water resistant, high quality, OEM performance, durable and reliable',
+        imageUrl: '/assets/images/filters/filter-8.png',
+        tags: ['Bag', 'Filtration', 'Oil-Filter'],
+      },
     ];
   }
 }
